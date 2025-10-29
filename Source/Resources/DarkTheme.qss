@@ -1,0 +1,80 @@
+/* * DarkTheme.qss - Orca Studio professional dark theme 
+ * Base colors inspired by Fractal Engine's UI.
+ */
+
+/**************************************************
+ * GLOBAL STYLES & BASE WIDGETS
+ **************************************************/
+QWidget {
+    background-color: #282a2e; /* Deep Base Color */
+    color: #c5c8c6;            /* Light text color */
+    selection-background-color: #0096cc; /* Accent Color (Ocean Blue) */
+    selection-color: #FFFFFF;
+    font-size: 10pt;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Scrollbars */
+QScrollBar:vertical, QScrollBar:horizontal {
+    border: none;
+    background: #282a2e;
+    width: 8px;
+    height: 8px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background: #4a4d53;
+    min-height: 10px;
+    border-radius: 4px;
+}
+
+/**************************************************
+ * CONTAINERS AND MENUS
+ **************************************************/
+
+/* Menu Bar and Dockable Panels */
+QMainWindow, QDockWidget, QFrame {
+    background-color: #32353a; /* Panel/Container Background (Slightly Lighter) */
+}
+
+QMenuBar {
+    background-color: #32353a;
+    border-bottom: 1px solid #282a2e;
+}
+QMenu {
+    background-color: #3b4047; 
+    border: 1px solid #4a4d53;
+}
+QMenu::item:selected, QMenuBar::item:selected {
+    background-color: #0096cc;
+    color: #FFFFFF;
+}
+
+/**************************************************
+ * INPUTS AND CONTROLS
+ **************************************************/
+QLineEdit, QTextEdit {
+    background-color: #3b4047;
+    border: 1px solid #4a4d53;
+    padding: 5px;
+    border-radius: 4px;
+    color: #c5c8c6;
+}
+QLineEdit:focus {
+    border: 1px solid #0096cc;
+}
+QPushButton {
+    background-color: #3b4047;
+    border: 1px solid #4a4d53;
+    color: #c5c8c6;
+    padding: 6px 12px;
+    border-radius: 4px;
+    outline: none;
+}
+QPushButton:hover {
+    background-color: #4a4d53;
+}
+QPushButton:pressed {
+    background-color: #282a2e;
+    border-color: #0096cc;
+}
